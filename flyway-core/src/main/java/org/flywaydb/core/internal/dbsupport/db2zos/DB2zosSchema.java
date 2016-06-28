@@ -20,6 +20,7 @@ import org.flywaydb.core.internal.dbsupport.JdbcTemplate;
 import org.flywaydb.core.internal.dbsupport.Schema;
 import org.flywaydb.core.internal.dbsupport.Table;
 import org.flywaydb.core.internal.dbsupport.Type;
+import org.flywaydb.core.internal.util.logging.Log;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -59,12 +60,14 @@ public class DB2zosSchema extends Schema<DB2zosDbSupport> {
 
     @Override
     protected void doCreate() throws SQLException {
-        throw new UnsupportedOperationException("Create Schema - is not supported in db2 on zOS");
+        System.out.println("Warning: TSA removed throw new UnsupportedOperationException");
+        // throw new UnsupportedOperationException("Create Schema - is not supported in db2 on zOS");
     }
 
     @Override
     protected void doDrop() throws SQLException {
-        throw new UnsupportedOperationException("Drop Schema - is not supported in db2 on zOS");
+        System.out.println("Warning: TSA removed throw new UnsupportedOperationException");
+        //throw new UnsupportedOperationException("Drop Schema - is not supported in db2 on zOS");
     }
 
     @Override
